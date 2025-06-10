@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="FocusFlow 专注于此 - 在线自习室                             tailwind.config &#x3D; {             darkMode: &#39;class&#39;,             theme: {                 extend: {                     colors: {">
+<meta property="og:type" content="website">
+<meta property="og:title" content="hexo">
+<meta property="og:url" content="http://example.com/html/frontend/index.html">
+<meta property="og:site_name" content="hexo">
+<meta property="og:description" content="FocusFlow 专注于此 - 在线自习室                             tailwind.config &#x3D; {             darkMode: &#39;class&#39;,             theme: {                 extend: {                     colors: {">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-10T13:43:47.638Z">
+<meta property="article:modified_time" content="2025-06-10T13:43:26.155Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/html/frontend/index.html" class="article-date">
+  <time class="dt-published" datetime="2025-06-10T13:43:47.638Z" itemprop="datePublished">2025-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>FocusFlow 专注于此 - 在线自习室</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#4080FF',
+                        success: '#00B42A',
+                        warning: '#FF7D00',
+                        danger: '#F53F3F',
+                        neutral: {
+                            100: '#F2F3F5',
+                            200: '#E5E6EB',
+                            300: '#C9CDD4',
+                            400: '#86909C',
+                            500: '#4E5969',
+                            600: '#272E3B',
+                            700: '#1D2129',
+                            800: '#141821',
+                            900: '#0A0C10',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'timer': '0 10px 25px -5px rgba(22, 93, 255, 0.1), 0 8px 10px -6px rgba(22, 93, 255, 0.1)',
+                        'button': '0 4px 6px -1px rgba(22, 93, 255, 0.1), 0 2px 4px -2px rgba(22, 93, 255, 0.1)',
+                        'card': '0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03)',
+                    },
+                    backgroundImage: {
+                        'study-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23165dff\" fill-opacity=\"0.03\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                        'study-pattern-dark': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23165dff\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                },
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .timer-circle {
+                @apply relative w-48 h-48 mx-auto rounded-full flex items-center justify-center 
+                       border-4 border-primary/20 shadow-timer transition-all duration-300;
+            }
+            .timer-text {
+                @apply text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-neutral-700;
+            }
+            .task-item {
+                @apply flex items-center p-3 mb-2 rounded-lg bg-white shadow-sm transition-all duration-300
+                       hover:shadow-md relative;
+            }
+            .task-item.completed {
+                @apply bg-neutral-100;
+            }
+            .task-item.completed .task-title {
+                @apply text-neutral-400 line-through;
+            }
+            .btn-primary {
+                @apply px-4 py-2 bg-primary text-white rounded-lg shadow-button transition-all duration-300
+                       hover:bg-secondary hover:-translate-y-0.5 active:translate-y-0;
+            }
+            .btn-secondary {
+                @apply px-4 py-2 bg-white text-neutral-600 border border-neutral-200 rounded-lg shadow-sm 
+                       transition-all duration-300 hover:bg-neutral-50 hover:shadow-md active:translate-y-0.5;
+            }
+            .btn-control {
+                @apply px-5 py-2.5 bg-primary text-white rounded-lg shadow-button transition-all duration-300
+                       hover:bg-secondary hover:-translate-y-0.5 active:translate-y-0;
+            }
+            .btn-reset {
+                @apply px-5 py-2.5 bg-neutral-200 text-neutral-600 border border-neutral-300 rounded-lg shadow-sm 
+                       transition-all duration-300 hover:bg-neutral-300 hover:shadow-md active:translate-y-0.5;
+            }
+            .btn-icon {
+                @apply w-10 h-10 flex items-center justify-center rounded-full bg-white text-neutral-600 
+                       border border-neutral-200 shadow-sm transition-all duration-300;
+            }
+            .btn-icon.active {
+                @apply bg-primary/10 text-primary border-primary/20;
+            }
+            .input-field {
+                @apply px-3 py-2 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 
+                       focus:ring-primary/50 focus:border-primary transition-all duration-300;
+            }
+            .delete-btn {
+                @apply absolute right-3 opacity-0 transition-opacity duration-200 text-neutral-400 hover:text-danger;
+            }
+            .task-item:hover .delete-btn {
+                @apply opacity-100;
+            }
+            .drag-handle {
+                @apply cursor-move text-neutral-400 mr-2 opacity-70 hover:opacity-100;
+            }
+            .timer-preset {
+                @apply px-3 py-1 rounded-full text-sm bg-white border border-neutral-200 
+                       hover:bg-primary/10 hover:text-primary transition-all duration-200;
+            }
+            .timer-preset.active {
+                @apply bg-primary text-white border-primary;
+            }
+            .timer-settings {
+                @apply mt-4 flex flex-wrap gap-2 justify-center;
+            }
+            .timer-input {
+                @apply w-16 text-center input-field;
+            }
+            .drop-placeholder {
+                @apply bg-primary/5 border-l-4 border-primary/20 h-12 rounded-lg my-2;
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            .animate-float-delay-1 {
+                animation: float 7s ease-in-out 1s infinite;
+            }
+            .animate-float-delay-2 {
+                animation: float 8s ease-in-out 2s infinite;
+            }
+            .scrollbar-thin {
+                scrollbar-width: thin;
+            }
+            .scrollbar-thin::-webkit-scrollbar {
+                width: 4px;
+                height: 4px;
+            }
+            .scrollbar-thin::-webkit-scrollbar-thumb {
+                background-color: rgba(156, 163, 175, 0.5);
+                border-radius: 4px;
+            }
+            .scrollbar-thin::-webkit-scrollbar-track {
+                background-color: rgba(243, 244, 246, 0.5);
+            }
+            .hover-lift {
+                @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+            }
+            .pulse-light {
+                animation: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+            .dark-mode-transition {
+                @apply transition-colors duration-300;
+            }
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0px); }
+            }
+            @keyframes pulse-light {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.7; }
+            }
+            /* 环形进度条样式 */
+            .timer-progress {
+                @apply absolute top-0 left-0 w-full h-full;
+            }
+            .timer-progress-circle {
+                @apply transition-all duration-300 ease-linear;
+            }
+            .timer-info {
+                @apply flex flex-col items-center justify-center;
+            }
+            .timer-total-time {
+                @apply text-xs text-neutral-500 opacity-0 transition-opacity duration-300;
+            }
+            .timer-circle:hover .timer-total-time {
+                @apply opacity-100;
+            }
+            /* 倒计时开始时显示的总时长 */
+            .timer-total-time.active {
+                @apply opacity-100;
+            }
+            /* 环境音音量控制滑块样式 */
+            .volume-slider {
+                @apply w-full h-2 rounded-lg appearance-none cursor-pointer accent-primary dark:bg-neutral-600;
+            }
+            .volume-slider::-webkit-slider-thumb {
+                @apply appearance-none w-4 h-4 rounded-full bg-primary cursor-pointer;
+            }
+            .volume-slider::-moz-range-thumb {
+                @apply w-4 h-4 rounded-full bg-primary cursor-pointer border-none;
+            }
+            /* 任务文本渐隐效果 */
+            .task-title-ellipsis {
+                @apply relative overflow-hidden;
+            }
+            .task-title-ellipsis::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 20px;
+                background: linear-gradient(to right, transparent, white);
+                pointer-events: none;
+                @apply dark:bg-gradient-to-r dark:from-transparent dark:to-neutral-600;
+            }
+            .task-item:hover .task-title-ellipsis::after {
+                @apply bg-gradient-to-r from-transparent to-transparent dark:from-transparent dark:to-transparent;
+            }
+            /* 输入框字数提示 */
+            .char-count {
+                @apply text-xs text-neutral-400 absolute bottom-1 right-2 dark:text-neutral-500;
+            }
+            .char-count.warning {
+                @apply text-warning;
+            }
+            .char-count.error {
+                @apply text-danger;
+            }
+            /* 倒计时文本 */
+            .timer-text-smaller {
+                @apply text-[clamp(2rem,4vw,3rem)];
+            }
+            /* 页面呼吸变色效果 */
+            .animate-breath {
+                animation: breath 2s ease-in-out infinite;
+            }
+            @keyframes breath {
+                0%, 100% { background-color: rgba(22, 93, 255, 0.05); }
+                50% { background-color: rgba(22, 93, 255, 0.15); }
+            }
+            .dark .animate-breath {
+                animation: breath-dark 2s ease-in-out infinite;
+            }
+            @keyframes breath-dark {
+                0%, 100% { background-color: rgba(22, 93, 255, 0.1); }
+                50% { background-color: rgba(22, 93, 255, 0.25); }
+            }
+            /* 不可点击遮罩 */
+            .overlay {
+                @apply fixed inset-0 bg-black/20 backdrop-blur-sm z-40 cursor-pointer;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-neutral-50 bg-study-pattern min-h-screen flex flex-col overflow-x-hidden dark:bg-neutral-800 dark:bg-study-pattern-dark dark:text-white dark-mode-transition">
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-md p-6 dark:bg-neutral-700">
+            <h2 class="text-2xl font-bold mb-6 text-center dark:text-white">FocusFlow 登录</h2>
+            
+            <div id="login-form">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1 dark:text-neutral-300">用户名</label>
+                    <input type="text" id="login-username" class="input-field w-full dark:bg-neutral-600 dark:text-white">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-1 dark:text-neutral-300">密码</label>
+                    <input type="password" id="login-password" class="input-field w-full dark:bg-neutral-600 dark:text-white">
+                </div>
+                <button id="login-btn" class="btn-primary w-full mb-4">登录</button>
+                <button id="show-register-btn" class="text-sm text-primary hover:underline">没有账号？立即注册</button>
+            </div>
+            
+            <div id="register-form" class="hidden">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1 dark:text-neutral-300">用户名</label>
+                    <input type="text" id="register-username" class="input-field w-full dark:bg-neutral-600 dark:text-white">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1 dark:text-neutral-300">密码</label>
+                    <input type="password" id="register-password" class="input-field w-full dark:bg-neutral-600 dark:text-white">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-1 dark:text-neutral-300">确认密码</label>
+                    <input type="password" id="register-confirm-password" class="input-field w-full dark:bg-neutral-600 dark:text-white">
+                </div>
+                <button id="register-btn" class="btn-primary w-full mb-4">注册</button>
+                <button id="show-login-btn" class="text-sm text-primary hover:underline">已有账号？立即登录</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顶部Logo -->
+    <header class="py-6 bg-white/80 backdrop-blur-sm shadow-sm relative z-10 dark:bg-neutral-900/80 dark-mode-transition">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-[clamp(1.5rem,2vw,2.5rem)] font-bold text-primary">FocusFlow 专注于此</h1>
+            <div class="flex items-center gap-4">
+                <div id="user-info" class="hidden">
+                    <span id="username-display" class="font-medium dark:text-white"></span>
+                    <button id="logout-btn" class="btn-secondary text-sm ml-2">退出</button>
+                </div>
+                <div id="current-time" class="text-neutral-600 dark:text-neutral-300 text-lg font-medium"></div>
+                <button id="theme-toggle" class="btn-icon hover-lift">
+                    <i class="fa fa-moon-o dark:hidden"></i>
+                    <i class="fa fa-sun-o hidden dark:inline-block"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="flex-grow container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8 relative z-10">
+        <!-- 左侧任务列表 -->
+        <section class="w-full md:w-2/5 bg-white/90 backdrop-blur-sm rounded-xl shadow-card p-6 dark:bg-neutral-700/90 dark-mode-transition flex flex-col">
+            <div class="flex justify-between items-center mb-5">
+                <h2 class="text-xl font-bold text-neutral-700 dark:text-white">待办事项</h2>
+                <span id="task-count" class="text-sm text-neutral-500 bg-neutral-100 px-3 py-1 rounded-full dark:bg-neutral-600 dark:text-neutral-300">
+                    0 项任务
+                </span>
+            </div>
+            
+            <div id="task-list-container" class="flex-grow overflow-y-auto scrollbar-thin">
+                <div id="task-list" class="space-y-2 mb-5">
+                    <!-- 任务将动态添加 -->
+                    <div class="flex justify-center items-center h-40 text-neutral-400">
+                        <i class="fa fa-tasks text-3xl mr-3"></i>
+                        <span>暂无任务，请添加新任务</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 新增任务 - 固定在底部 -->
+            <div class="mt-4 relative">
+                <div class="relative">
+                    <textarea id="new-task-input" placeholder="添加新任务..." rows="2" class="input-field w-full dark:bg-neutral-600 dark:text-white dark:border-neutral-500 dark:focus:ring-primary/30 dark:focus:border-primary resize-none"></textarea>
+                    <span id="char-count" class="char-count">0/40</span>
+                </div>
+                <button id="add-task-btn" class="btn-primary hover-lift mt-2 w-full">
+                    <i class="fa fa-plus mr-1"></i> 添加
+                </button>
+            </div>
+        </section>
+        
+        <!-- 右侧番茄钟 -->
+        <section class="w-full md:w-3/5 bg-white/90 backdrop-blur-sm rounded-xl shadow-card p-6 flex flex-col dark:bg-neutral-700/90 dark-mode-transition">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-neutral-700 mb-3 dark:text-white">当前任务</h2>
+                <div id="current-task" class="text-lg text-neutral-500 py-3 px-5 bg-neutral-50 rounded-lg min-h-[60px] flex items-center dark:bg-neutral-600 dark:text-neutral-300">
+                    未选择任务
+                </div>
+            </div>
+            
+            <!-- 计时器 -->
+            <div class="flex-grow flex flex-col justify-center items-center">
+                <div id="timer-container" class="relative">
+                    <div id="timer-circle" class="timer-circle dark:border-primary/30">
+                        <!-- 环形进度条 SVG -->
+                        <svg class="timer-progress" viewBox="0 0 160 160">
+                            <!-- 背景圆环 -->
+                            <circle cx="80" cy="80" r="72" fill="none" stroke="#E5E6EB" stroke-width="4" class="dark:stroke-neutral-600"></circle>
+                            <!-- 进度圆环 - 初始为完整圆环 -->
+                            <circle id="progress-circle" cx="80" cy="80" r="72" fill="none" stroke="#165DFF" stroke-width="4" 
+                                    stroke-dasharray="452.39" stroke-dashoffset="0" stroke-linecap="round" 
+                                    class="timer-progress-circle dark:stroke-primary/80"></circle>
+                        </svg>
+                        
+                        <!-- 计时器显示 -->
+                        <div class="timer-info">
+                            <span id="timer-display" class="timer-text timer-text-smaller dark:text-white">10:00</span>
+                            <span id="timer-total-time" class="timer-total-time dark:text-neutral-400">总时长: 10分钟</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 计时器设置 - 倒计时开始时隐藏 -->
+                <div id="timer-settings" class="timer-settings transition-all duration-300">
+                    <span class="text-sm text-neutral-500 dark:text-neutral-300">自定义时间：</span>
+                    <input type="number" id="minutes-input" min="1" max="60" value="10" class="timer-input dark:bg-neutral-600 dark:text-white dark:border-neutral-500 dark:focus:ring-primary/30 dark:focus:border-primary">
+                    <span class="text-sm text-neutral-500 dark:text-neutral-300">分</span>
+                    <button id="set-time-btn" class="btn-primary text-sm px-3 py-1 hover-lift">
+                        设置
+                    </button>
+                    
+                    <!-- 预设时长按钮 -->
+                    <div class="flex gap-1 mt-2">
+                        <button class="timer-preset active dark:bg-neutral-600 dark:border-neutral-500 dark:hover:bg-primary/20" data-time="10">10分钟</button>
+                        <button class="timer-preset dark:bg-neutral-600 dark:border-neutral-500 dark:hover:bg-primary/20" data-time="30">30分钟</button>
+                        <button class="timer-preset dark:bg-neutral-600 dark:border-neutral-500 dark:hover:bg-primary/20" data-time="60">60分钟</button>
+                    </div>
+                </div>
+                
+                <!-- 控制按钮 - 倒计时开始时调整间距 -->
+                <div id="control-buttons" class="mt-8 flex gap-3 transition-all duration-300">
+                    <button id="toggle-timer-btn" class="btn-control hover-lift">
+                        <i class="fa fa-play mr-1"></i> 开始
+                    </button>
+                    <button id="reset-btn" class="btn-reset hover-lift" disabled>
+                        <i class="fa fa-refresh mr-1"></i> 重置
+                    </button>
+                    <button id="fullscreen-btn" class="btn-icon hover-lift dark:bg-neutral-600 dark:text-white dark:border-neutral-500">
+                        <i class="fa fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 底部环境音 -->
+    <footer class="py-5 bg-white/80 backdrop-blur-sm shadow-inner relative z-10 dark:bg-neutral-900/80 dark-mode-transition">
+        <div class="container mx-auto px-4">
+            <h3 class="text-center text-neutral-500 mb-4 dark:text-neutral-300">环境音</h3>
+            <div class="flex flex-col items-center gap-3">
+                <div class="flex justify-center gap-3 md:gap-4 flex-wrap">
+                    <!-- 落雨声 -->
+                    <button class="btn-icon btn-rain dark:bg-neutral-600 dark:text-white dark:border-neutral-500" data-sound="rain">
+                        <i class="fa fa-umbrella"></i>
+                    </button>
+                    <!-- 鸟鸣声 -->
+                    <button class="btn-icon btn-bird dark:bg-neutral-600 dark:text-white dark:border-neutral-500" data-sound="bird">
+                        <i class="fa fa-volume-up"></i>
+                    </button>
+                    <!-- 咖啡厅 -->
+                    <button class="btn-icon btn-coffee dark:bg-neutral-600 dark:text-white dark:border-neutral-500" data-sound="coffee">
+                        <i class="fa fa-coffee"></i>
+                    </button>
+                    <!-- 风吹声 -->
+                    <button class="btn-icon btn-wind dark:bg-neutral-600 dark:text-white dark:border-neutral-500" data-sound="wind">
+                        <i class="fa fa-leaf"></i>
+                    </button>
+                    <!-- 溪流声 -->
+                    <button class="btn-icon btn-stream dark:bg-neutral-600 dark:text-white dark:border-neutral-500" data-sound="stream">
+                        <i class="fa fa-tint"></i>
+                    </button>
+                </div>
+                
+                <!-- 音量控制 -->
+                <div id="volume-controls-container" class="w-full max-w-md mt-3">
+                    <div id="volume-control-template" class="hidden">
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex items-center gap-3 dark:bg-neutral-600 dark:border dark:border-neutral-500/30">
+                            <i class="fa fa-volume-off text-neutral-400 w-5"></i>
+                            <input type="range" min="0" max="100" value="0" class="volume-slider">
+                            <i class="fa fa-volume-up text-neutral-400 w-5"></i>
+                            <span class="sound-name text-sm text-neutral-500 dark:text-neutral-300">雨声</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // DOM元素
+        const loginModal = document.getElementById('login-modal');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const loginBtn = document.getElementById('login-btn');
+        const registerBtn = document.getElementById('register-btn');
+        const showRegisterBtn = document.getElementById('show-register-btn');
+        const showLoginBtn = document.getElementById('show-login-btn');
+        const loginUsername = document.getElementById('login-username');
+        const loginPassword = document.getElementById('login-password');
+        const registerUsername = document.getElementById('register-username');
+        const registerPassword = document.getElementById('register-password');
+        const registerConfirmPassword = document.getElementById('register-confirm-password');
+        const userInfo = document.getElementById('user-info');
+        const usernameDisplay = document.getElementById('username-display');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        const taskList = document.getElementById('task-list');
+        const taskListContainer = document.getElementById('task-list-container');
+        const newTaskInput = document.getElementById('new-task-input');
+        const addTaskBtn = document.getElementById('add-task-btn');
+        const currentTask = document.getElementById('current-task');
+        const toggleTimerBtn = document.getElementById('toggle-timer-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const timerDisplay = document.getElementById('timer-display');
+        const ambientSoundButtons = document.querySelectorAll('.btn-icon[data-sound]');
+        const minutesInput = document.getElementById('minutes-input');
+        const setTimeBtn = document.getElementById('set-time-btn');
+        const timerPresets = document.querySelectorAll('.timer-preset');
+        const taskCount = document.getElementById('task-count');
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTimeDisplay = document.getElementById('current-time');
+        const progressCircle = document.getElementById('progress-circle');
+        const timerTotalTime = document.getElementById('timer-total-time');
+        const timerSettings = document.getElementById('timer-settings');
+        const controlButtons = document.getElementById('control-buttons');
+        const timerCircle = document.getElementById('timer-circle');
+        const volumeControlsContainer = document.getElementById('volume-controls-container');
+        const volumeControlTemplate = document.getElementById('volume-control-template');
+        const charCount = document.getElementById('char-count');
+        const body = document.body;
+        
+        // 圆环周长 (2 * π * r)
+        const CIRCUMFERENCE = 2 * Math.PI * 72;
+        // 设置SVG圆环样式
+        progressCircle.style.strokeDasharray = CIRCUMFERENCE;
+        progressCircle.style.strokeDashoffset = '0';
+        
+        // 计时器状态
+        let isRunning = false;
+        let timer;
+        let timeLeft = 10 * 60; // 10分钟，单位为秒
+        let totalTime = 10 * 60; // 总时长，单位为秒
+        let isPaused = false;
+        
+        // 环境音状态
+        const ambientSounds = {
+            // 预设的五种环境音及其音频文件
+            rain: {
+                name: '落雨声',
+                icon: 'fa-cloud-rain',
+                audio: null,
+                volume: 0, // 0-100
+                isPlaying: false
+            },
+            bird: {
+                name: '鸟鸣声',
+                icon: 'fa-bird',
+                audio: null,
+                volume: 0,
+                isPlaying: false
+            },
+            coffee: {
+                name: '咖啡厅',
+                icon: 'fa-coffee',
+                audio: null,
+                volume: 0,
+                isPlaying: false
+            },
+            wind: {
+                name: '风吹声',
+                icon: 'fa-wind',
+                audio: null,
+                volume: 0,
+                isPlaying: false
+            },
+            stream: {
+                name: '溪流声',
+                icon: 'fa-tint',
+                audio: null,
+                volume: 0,
+                isPlaying: false
+            }
+        };
+        
+        // 初始化环境音
+        function initAmbientSounds() {
+            // 创建音量控制元素
+            for (const type in ambientSounds) {
+                createVolumeControl(type);
+            }
+            // 加载环境音音频
+            for (const type in ambientSounds) {
+                loadAmbientSoundAudio(type);
+            }
+        }
+        
+        // 加载环境音音频
+        function loadAmbientSoundAudio(type) {
+            // 使用预设的音频文件
+            const audioFiles = {
+                rain: 'audio/rain.mp3',
+                bird: 'audio/bird.mp3',
+                coffee: 'audio/coffee.mp3',
+                wind: 'audio/wind.mp3',
+                stream: 'audio/stream.mp3'
+            };
+            
+            const sound = ambientSounds[type];
+            sound.audio = new Audio(audioFiles[type]);
+            sound.audio.loop = true; // 设置循环播放
+            sound.audio.volume = sound.volume / 100; // 转换为0-1范围
+        }
+        
+        // 创建音量控制元素
+        function createVolumeControl(type) {
+            const sound = ambientSounds[type];
+            const template = volumeControlTemplate.cloneNode(true);
+            template.id = `volume-control-${type}`;
+            template.classList.remove('hidden');
+            
+            // 设置音量控制元素
+            const slider = template.querySelector('input[type="range"]');
+            const nameSpan = template.querySelector('.sound-name');
+            const iconStart = template.querySelector('.fa-volume-off');
+            const iconEnd = template.querySelector('.fa-volume-up');
+            
+            // 设置名称和图标
+            nameSpan.textContent = sound.name;
+            slider.id = `volume-slider-${type}`;
+            slider.value = sound.volume;
+            
+            // 添加事件监听
+            slider.addEventListener('input', function() {
+                updateSoundVolume(type, parseInt(this.value));
+            });
+            
+            // 添加到容器
+            volumeControlsContainer.appendChild(template);
+        }
+        
+        // 更新环境音音量
+        function updateSoundVolume(type, volume) {
+            const sound = ambientSounds[type];
+            sound.volume = volume;
+            
+            // 更新音频音量
+            if (sound.audio) {
+                sound.audio.volume = volume / 100;
+                
+                // 如果音量大于0但没有播放，则开始播放
+                if (volume > 0 && !sound.isPlaying) {
+                    sound.audio.play().catch(err => {
+                        console.error(`播放${sound.name}失败:`, err);
+                        showNotification('播放失败', `无法播放${sound.name}。`);
+                    });
+                    sound.isPlaying = true;
+                    
+                    // 更新按钮状态
+                    const btn = document.querySelector(`.btn-${type}`);
+                    btn.classList.add('active', 'pulse-light');
+                } 
+                // 如果音量为0但正在播放，则暂停播放
+                else if (volume === 0 && sound.isPlaying) {
+                    sound.audio.pause();
+                    sound.isPlaying = false;
+                    
+                    // 更新按钮状态
+                    const btn = document.querySelector(`.btn-${type}`);
+                    btn.classList.remove('active', 'pulse-light');
+                }
+            }
+        }
+        
+        // 更新任务计数
+        function updateTaskCount() {
+            const count = taskList.querySelectorAll('.task-item').length;
+            taskCount.textContent = `${count} 项任务`;
+            
+            // 显示空状态提示
+            if (count === 0) {
+                taskList.innerHTML = `
+                    <div class="flex justify-center items-center h-40 text-neutral-400">
+                        <i class="fa fa-tasks text-3xl mr-3"></i>
+                        <span>暂无任务，请添加新任务</span>
+                    </div>
+                `;
+            }
+        }
+        
+        // 更新计时器显示
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // 更新进度条
+            updateProgressBar();
+            
+            // 更新计时器样式
+            if (timeLeft <= 60) {
+                timerDisplay.classList.add('text-danger');
+                timerCircle.classList.add('border-danger/20');
+                timerCircle.classList.remove('border-primary/20');
+                progressCircle.classList.add('dark:stroke-danger/80');
+                progressCircle.classList.remove('dark:stroke-primary/80');
+                progressCircle.classList.add('stroke-danger');
+                progressCircle.classList.remove('stroke-primary');
+            } else {
+                timerDisplay.classList.remove('text-danger');
+                timerCircle.classList.remove('border-danger/20');
+                timerCircle.classList.add('border-primary/20');
+                progressCircle.classList.remove('dark:stroke-danger/80');
+                progressCircle.classList.add('dark:stroke-primary/80');
+                progressCircle.classList.remove('stroke-danger');
+                progressCircle.classList.add('stroke-primary');
+            }
+        }
+        
+        // 更新进度条
+        function updateProgressBar() {
+            const progress = timeLeft / totalTime;
+            const dashoffset = CIRCUMFERENCE * (1 - progress);
+            progressCircle.style.strokeDashoffset = dashoffset;
+        }
+        
+        // 设置计时器时间
+        function setTimerTime(minutes) {
+            if (isRunning) return;
+            
+            timeLeft = minutes * 60;
+            totalTime = minutes * 60;
+            updateTimerDisplay();
+            minutesInput.value = minutes;
+            
+            // 更新总时长显示
+            updateTotalTimeDisplay();
+            
+            // 更新预设按钮状态
+            timerPresets.forEach(preset => {
+                if (parseInt(preset.dataset.time) === minutes) {
+                    preset.classList.add('active');
+                } else {
+                    preset.classList.remove('active');
+                }
+            });
+        }
+        
+        // 更新总时长显示
+        function updateTotalTimeDisplay() {
+            const minutes = Math.floor(totalTime / 60);
+            timerTotalTime.textContent = `总时长: ${minutes}分钟`;
+        }
+        
+        // 切换计时器状态
+        function toggleTimer() {
+            if (isRunning) {
+                pauseTimer();
+            } else {
+                startTimer();
+            }
+        }
+
+        function pauseTimer() {
+            isRunning = false;
+            isPaused = true;
+            clearInterval(timer);
+            toggleTimerBtn.innerHTML = '<i class="fa fa-play mr-1"></i> 继续';
+            toggleTimerBtn.classList.remove('bg-primary', 'hover:bg-secondary');
+            toggleTimerBtn.classList.add('bg-warning', 'hover:bg-warning/90');
+            resetBtn.disabled = false;
+            
+            // 恢复界面
+            timerSettings.classList.remove('opacity-0', 'pointer-events-none');
+            controlButtons.classList.remove('mt-4');
+            controlButtons.classList.add('mt-8');
+            timerCircle.classList.remove('scale-110');
+            timerTotalTime.classList.remove('active');
+        }
+
+        function startTimer() {
+            isRunning = true;
+            isPaused = false;
+            toggleTimerBtn.innerHTML = '<i class="fa fa-pause mr-1"></i> 暂停';
+            toggleTimerBtn.classList.remove('bg-warning', 'hover:bg-warning/90');
+            toggleTimerBtn.classList.add('bg-primary', 'hover:bg-secondary');
+            resetBtn.disabled = false;
+            
+            // 隐藏设置区域，放大圆环
+            timerSettings.classList.add('opacity-0', 'pointer-events-none');
+            controlButtons.classList.remove('mt-8');
+            controlButtons.classList.add('mt-4');
+            timerCircle.classList.add('scale-110');
+            timerTotalTime.classList.add('active');
+            
+            timer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    handleTimerCompletion();
+                }
+            }, 1000);
+        }
+
+        function handleTimerCompletion() {
+            isRunning = false;
+            isPaused = false;
+            toggleTimerBtn.innerHTML = '<i class="fa fa-play mr-1"></i> 开始';
+            toggleTimerBtn.classList.remove('bg-warning', 'hover:bg-warning/90');
+            toggleTimerBtn.classList.add('bg-primary', 'hover:bg-secondary');
+            resetBtn.disabled = true;
+            
+            // 恢复界面
+            timerSettings.classList.remove('opacity-0', 'pointer-events-none');
+            controlButtons.classList.remove('mt-4');
+            controlButtons.classList.add('mt-8');
+            timerCircle.classList.remove('scale-110');
+            timerTotalTime.classList.remove('active');
+            
+            // 计时器结束动画
+            body.classList.add('animate-breath');
+            
+            // 创建遮罩层
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            overlay.id = 'timer-overlay';
+            
+            // 显示完成提示
+            showNotification('时间到！', '您的专注时间已结束。点击屏幕继续...', true);
+            
+            // 自动标记当前任务为完成
+            if (currentTask.textContent !== '未选择任务') {
+                const taskItems = document.querySelectorAll('.task-item');
+                taskItems.forEach(item => {
+                    const title = item.querySelector('.task-title').textContent;
+                    if (title === currentTask.textContent) {
+                        item.querySelector('input[type="checkbox"]').checked = true;
+                        item.classList.add('completed');
+                    }
+                });
+                currentTask.textContent = '未选择任务';
+                saveTasks();
+            }
+            
+            // 添加点击事件，点击屏幕任何位置关闭提示
+            overlay.addEventListener('click', function() {
+                this.remove();
+                body.classList.remove('animate-breath');
+                const notification = document.querySelector('.fixed.top-4.right-4');
+                if (notification) notification.remove();
+                resetTimer();
+            });
+            
+            document.body.appendChild(overlay);
+        }
+        
+        // 重置计时器
+        function resetTimer() {
+            clearInterval(timer);
+            isRunning = false;
+            isPaused = false;
+            timeLeft = totalTime; // 恢复到总时长
+            updateTimerDisplay();
+            
+            toggleTimerBtn.innerHTML = '<i class="fa fa-play mr-1"></i> 开始';
+            toggleTimerBtn.classList.remove('bg-warning', 'hover:bg-warning/90');
+            toggleTimerBtn.classList.add('bg-primary', 'hover:bg-secondary');
+            resetBtn.disabled = true;
+            
+            // 恢复界面
+            timerSettings.classList.remove('opacity-0', 'pointer-events-none');
+            controlButtons.classList.remove('mt-4');
+            controlButtons.classList.add('mt-8');
+            timerCircle.classList.remove('scale-110');
+            timerTotalTime.classList.remove('active');
+        }
+        
+        // 显示通知
+        function showNotification(title, message, persistent = false) {
+            // 创建通知元素
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-white shadow-lg rounded-lg p-4 z-50 transform translate-x-full transition-transform duration-300 hover-lift dark:bg-neutral-800 dark:text-white';
+            notification.innerHTML = `
+                <div class="flex items-start">
+                    <div class="mr-3 text-success">
+                        <i class="fa fa-check-circle text-xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-neutral-700 dark:text-white">${title}</h4>
+                        <p class="text-sm text-neutral-500 mt-1 dark:text-neutral-300">${message}</p>
+                    </div>
+                    <button class="close-notification text-neutral-400 hover:text-neutral-600 dark:text-neutral-400 dark:hover:text-neutral-200">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            `;
+            
+            // 添加到页面
+            document.body.appendChild(notification);
+            
+            // 显示动画
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 10);
+            
+            // 如果不是持久的通知，自动关闭（延迟3s）
+            if (!persistent) {
+                setTimeout(() => {
+                    notification.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 300);
+                }, 3000);
+            }
+            
+            // 关闭按钮
+            notification.querySelector('.close-notification').addEventListener('click', () => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    notification.remove();
+                    
+                    // 如果是持久的通知，同时移除遮罩层和呼吸效果
+                    if (persistent) {
+                        const overlay = document.getElementById('timer-overlay');
+                        if (overlay) {
+                            overlay.remove();
+                        }
+                        body.classList.remove('animate-breath');
+
+                        resetTimer();
+                    }
+                }, 300);
+            });
+        }
+        
+        // 切换全屏模式
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error(`全屏请求失败: ${err.message}`);
+                });
+                fullscreenBtn.innerHTML = '<i class="fa fa-compress"></i>';
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                    fullscreenBtn.innerHTML = '<i class="fa fa-expand"></i>';
+                }
+            }
+        }
+        
+        // 创建任务项
+        function createTaskItem(text, completed = false) {
+            const taskItem = document.createElement('div');
+            taskItem.className = `task-item ${completed ? 'completed' : ''} dark:bg-neutral-600 dark:text-white dark:shadow-md dark:border dark:border-neutral-500/30`;
+            taskItem.setAttribute('draggable', 'true');
+            taskItem.innerHTML = `
+                <i class="fa fa-bars drag-handle"></i>
+                <input type="checkbox" class="w-5 h-5 rounded text-primary focus:ring-primary/50 mr-3 dark:bg-neutral-500 dark:border-neutral-400" ${completed ? 'checked' : ''}>
+                <span class="task-title task-title-ellipsis flex-grow">${text}</span>
+                <button class="delete-btn">
+                    <i class="fa fa-times"></i>
+                </button>
+            `;
+            
+            // 为新任务添加事件监听
+            const checkbox = taskItem.querySelector('input[type="checkbox"]');
+            const deleteBtn = taskItem.querySelector('.delete-btn');
+            
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    taskItem.classList.add('completed');
+                    
+                    // 检查是否是当前选中的任务
+                    if (currentTask.textContent === text) {
+                        currentTask.textContent = '未选择任务';
+                        currentTask.classList.remove('bg-primary/5', 'text-primary');
+                        currentTask.classList.add('text-neutral-500');
+                        
+                        // 移除所有任务的选中效果
+                        document.querySelectorAll('.task-item').forEach(item => {
+                            item.classList.remove('bg-primary/5', 'border-l-4', 'border-primary');
+                        });
+                    }
+                } else {
+                    taskItem.classList.remove('completed');
+                }
+                
+                // 保存任务状态
+                saveTasks();
+            });
+            
+            deleteBtn.addEventListener('click', () => {
+                // 检查是否是当前选中的任务
+                if (currentTask.textContent === text) {
+                    currentTask.textContent = '未选择任务';
+                    currentTask.classList.remove('bg-primary/5', 'text-primary');
+                    currentTask.classList.add('text-neutral-500');
+                }
+                // 删除动画
+                taskItem.classList.add('opacity-0', 'translate-x-4');
+                taskItem.style.transition = 'all 0.3s ease';
+                
+                setTimeout(() => {
+                    taskItem.remove();
+                    updateTaskCount();
+                    saveTasks();
+                }, 300);
+            });
+            
+            // 点击任务选择为当前任务
+            taskItem.addEventListener('click', (e) => {
+                if (e.target === checkbox || e.target === deleteBtn || e.target.tagName === 'I') return;
+                
+                const taskTitle = taskItem.querySelector('.task-title').textContent;
+                currentTask.textContent = taskTitle;
+                
+                // 添加选中效果
+                document.querySelectorAll('.task-item').forEach(item => {
+                    item.classList.remove('bg-primary/5', 'border-l-4', 'border-primary');
+                });
+                taskItem.classList.add('bg-primary/5', 'border-l-4', 'border-primary');
+                
+                // 更新当前任务显示样式
+                currentTask.classList.remove('text-neutral-500');
+                currentTask.classList.add('bg-primary/5', 'text-primary');
+            });
+            
+            // 为拖拽功能添加事件监听
+            setupDragAndDrop(taskItem);
+            
+            return taskItem;
+        }
+        
+        // 添加新任务
+        function addTask() {
+            const taskText = newTaskInput.value.trim();
+            if (taskText === '') return;
+            
+            // 清除空状态提示
+            if (taskList.querySelector('.text-neutral-400')) {
+                taskList.innerHTML = '';
+            }
+            
+            const taskItem = createTaskItem(taskText);
+            
+            // 添加动画效果
+            taskItem.classList.add('opacity-0', 'translate-y-4');
+            taskList.appendChild(taskItem);
+            
+            // 显示动画
+            setTimeout(() => {
+                taskItem.classList.remove('opacity-0', 'translate-y-4');
+            }, 10);
+            
+            // 清空输入框
+            newTaskInput.value = '';
+            updateCharCount(); // 重置字数计数
+            updateTaskCount();
+            saveTasks();
+            
+            // 滚动到最新添加的任务
+            taskListContainer.scrollTop = taskListContainer.scrollHeight;
+        }
+        
+        // 设置拖拽功能
+        function setupDragAndDrop(taskItem) {
+            // 创建放置占位符
+            const placeholder = document.createElement('div');
+            placeholder.className = 'drop-placeholder dark:bg-primary/10 dark:border-primary/30';
+            
+            // 拖拽开始
+            taskItem.addEventListener('dragstart', function(e) {
+                this.classList.add('opacity-50', 'scale-95');
+                this.style.cursor = 'grabbing';
+                setTimeout(() => {
+                    this.style.display = 'none';
+                }, 0);
+            });
+            
+            // 拖拽结束
+            taskItem.addEventListener('dragend', function() {
+                this.classList.remove('opacity-50', 'scale-95');
+                this.style.display = 'flex';
+                this.style.cursor = 'grab';
+                
+                // 移除占位符
+                if (placeholder.parentNode) {
+                    placeholder.parentNode.removeChild(placeholder);
+                }
+                
+                // 保存任务顺序
+                saveTasks();
+            });
+            
+            // 允许放置
+            taskList.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                
+                // 获取当前拖拽的元素
+                const draggedItem = document.querySelector('.task-item[draggable="true"].opacity-50');
+                if (!draggedItem) return;
+                
+                // 获取鼠标位置下的元素
+                const afterElement = getDragAfterElement(taskList, e.clientY);
+                
+                // 如果鼠标位置下没有元素或已经是正确位置，则不添加占位符
+                if (afterElement === placeholder || (afterElement === null && taskList.lastChild === draggedItem)) {
+                    return;
+                }
+                
+                // 确保只有一个占位符
+                const existingPlaceholder = taskList.querySelector('.drop-placeholder');
+                if (existingPlaceholder && existingPlaceholder !== placeholder) {
+                    existingPlaceholder.remove();
+                }
+                
+                // 添加占位符
+                if (afterElement) {
+                    taskList.insertBefore(placeholder, afterElement);
+                } else {
+                    taskList.appendChild(placeholder);
+                }
+            });
+            
+            // 拖拽进入
+            taskList.addEventListener('dragenter', function(e) {
+                e.preventDefault();
+            });
+            
+            // 放置
+            taskList.addEventListener('drop', function(e) {
+                e.preventDefault();
+                
+                // 获取当前拖拽的元素
+                const draggedItem = document.querySelector('.task-item[draggable="true"].opacity-50');
+                if (!draggedItem) return;
+                
+                // 找到放置位置
+                const afterElement = placeholder;
+                
+                if (afterElement) {
+                    taskList.insertBefore(draggedItem, afterElement);
+                } else {
+                    taskList.appendChild(draggedItem);
+                }
+                
+                // 添加放置动画
+                draggedItem.classList.add('bg-primary/5');
+                setTimeout(() => {
+                    draggedItem.classList.remove('bg-primary/5');
+                }, 300);
+                
+                // 移除占位符
+                if (placeholder.parentNode) {
+                    placeholder.parentNode.removeChild(placeholder);
+                }
+            });
+        }
+        
+        // 获取拖拽元素下方的元素
+        function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.task-item:not([draggable="false"])')];
+            
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        // 检查登录状态
+        async function checkAuth() {
+            try {
+                const response = await fetch('/api/me', { credentials: 'include' });
+                if (response.ok) {
+                    const user = await response.json();
+                    showUserInfo(user);
+                    return true;
+                }
+            } catch (err) {
+                console.error('检查登录状态失败:', err);
+            }
+            showLoginModal();
+            return false;
+        }
+
+        // 显示用户信息
+        function showUserInfo(user) {
+            usernameDisplay.textContent = user.username;
+            userInfo.classList.remove('hidden');
+            loginModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // 显示登录模态框
+        function showLoginModal() {
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+            loginModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 登录
+        async function login() {
+            const username = loginUsername.value.trim();
+            const password = loginPassword.value.trim();
+            
+            if (!username || !password) {
+                showNotification('错误', '请输入用户名和密码');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password }),
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    showUserInfo(result.user);
+                    loadTasks();
+                } else {
+                    const error = await response.json();
+                    showNotification('错误', error.error || '登录失败');
+                }
+            } catch (err) {
+                console.error('登录失败:', err);
+                showNotification('错误', '登录失败，请稍后再试');
+            }
+        }
+
+        // 注册
+        async function register() {
+            const username = registerUsername.value.trim();
+            const password = registerPassword.value.trim();
+            const confirmPassword = registerConfirmPassword.value.trim();
+            
+            if (!username || !password || !confirmPassword) {
+                showNotification('错误', '请填写所有字段');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showNotification('错误', '两次输入的密码不一致');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password }),
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    showUserInfo(result.user);
+                    showNotification('欢迎', result.message || '欢迎使用FocusFlow');
+                    loadTasks();
+                } else {
+                    const error = await response.json();
+                    showNotification('错误', error.error || '注册失败');
+                }
+            } catch (err) {
+                console.error('注册失败:', err);
+                showNotification('错误', '注册失败，请稍后再试');
+            }
+        }
+
+        // 登出
+        async function logout() {
+            try {
+                await fetch('/api/logout', { 
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                userInfo.classList.add('hidden');
+                showLoginModal();
+                
+                // 清空当前任务显示
+                taskList.innerHTML = '';
+                currentTask.textContent = '未选择任务';
+                currentTask.classList.remove('bg-primary/5', 'text-primary');
+                currentTask.classList.add('text-neutral-500');
+                updateTaskCount();
+                
+                // 清空登录表单
+                loginUsername.value = '';
+                loginPassword.value = '';
+                registerUsername.value = '';
+                registerPassword.value = '';
+                registerConfirmPassword.value = '';
+                
+                // 重置计时器
+                resetTimer();
+                setTimerTime(10);
+                
+                // 停止所有环境音
+                for (const type in ambientSounds) {
+                    updateSoundVolume(type, 0);
+                    const slider = document.getElementById(`volume-slider-${type}`);
+                    if (slider) slider.value = 0;
+                }
+                // 取消所有环境音按钮的激活状态
+                ambientSoundButtons.forEach(btn => btn.classList.remove('active'));
+                
+            } catch (err) {
+                console.error('登出失败:', err);
+                showNotification('错误', '登出失败');
+            }
+        }
+        
+        // 保存任务（发送至后端）
+        async function saveTasks() {
+            const tasks = Array.from(taskList.querySelectorAll('.task-item')).map(item => ({
+                text: item.querySelector('.task-title').textContent,
+                completed: item.classList.contains('completed')
+            }));
+
+            try {
+                const response = await fetch('/api/tasks', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ tasks }),
+                    credentials: 'include'
+                });
+                
+                if (!response.ok) throw new Error('保存失败');
+            } catch (err) {
+                console.error('保存失败:', err);
+                showNotification('错误', '无法保存任务到服务器');
+            }
+        }
+        
+        // 加载任务（从后端获取）
+        async function loadTasks() {
+            try {
+                const response = await fetch('/api/tasks', { credentials: 'include' });
+                if (!response.ok) throw new Error('请求失败');
+                
+                const tasks = await response.json();
+                taskList.innerHTML = '';
+                
+                if (tasks.length === 0) {
+                    showEmptyState();
+                    return;
+                }
+                
+                tasks.forEach(task => {
+                    const taskItem = createTaskItem(task.text, task.completed);
+                    taskList.appendChild(taskItem);
+                });
+                
+                updateTaskCount();
+            } catch (err) {
+                console.error('加载失败:', err);
+                showNotification('错误', '无法从服务器加载任务');
+                showEmptyState();
+            }
+        }
+
+        // 切换主题
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        
+        // 初始化主题
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        }
+        
+        // 更新当前时间
+        function updateCurrentTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            currentTimeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        // 更新输入框字数计数
+        function updateCharCount() {
+            const count = newTaskInput.value.length;
+            charCount.textContent = `${count}/40`;
+            
+            // 更新提示颜色
+            if (count > 30) {
+                charCount.classList.add('warning');
+            } else {
+                charCount.classList.remove('warning');
+            }
+            
+            if (count > 40) {
+                charCount.classList.add('error');
+                newTaskInput.value = newTaskInput.value.substring(0, 40);
+                charCount.textContent = `40/40`;
+            } else {
+                charCount.classList.remove('error');
+            }
+        }
+        
+        // 事件监听
+        loginBtn.addEventListener('click', login);
+        registerBtn.addEventListener('click', register);
+        showRegisterBtn.addEventListener('click', () => {
+            loginForm.classList.add('hidden');
+            registerForm.classList.remove('hidden');
+        });
+        showLoginBtn.addEventListener('click', () => {
+            registerForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        });
+        logoutBtn.addEventListener('click', logout);
+
+        // 页面加载逻辑
+        window.addEventListener('load', async () => {
+            initTheme();
+            updateCurrentTime();
+            setInterval(updateCurrentTime, 1000);
+            updateTotalTimeDisplay();
+            initAmbientSounds();
+            updateCharCount();
+            
+            const isAuthenticated = await checkAuth();
+            if (isAuthenticated) {
+                updateTaskListHeight();
+                loadTasks();
+            }
+        });
+
+        toggleTimerBtn.addEventListener('click', toggleTimer);
+        resetBtn.addEventListener('click', resetTimer);
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+        addTaskBtn.addEventListener('click', addTask);
+        newTaskInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addTask();
+            }
+        });
+        
+        // 监听输入框变化，更新字数提示
+        newTaskInput.addEventListener('input', updateCharCount);
+        
+        // 计时器设置事件
+        setTimeBtn.addEventListener('click', () => {
+            const minutes = parseInt(minutesInput.value);
+            if (minutes >= 1 && minutes <= 60) {
+                setTimerTime(minutes);
+            } else {
+                minutesInput.classList.add('border-danger');
+                setTimeout(() => {
+                    minutesInput.classList.remove('border-danger');
+                }, 1000);
+            }
+        });
+        
+        // 预设时长按钮事件
+        timerPresets.forEach(preset => {
+            preset.addEventListener('click', () => {
+                const minutes = parseInt(preset.dataset.time);
+                setTimerTime(minutes);
+            });
+        });
+        
+        // 主题切换事件
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // 环境音按钮事件
+        ambientSoundButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const type = this.dataset.sound;
+                // 如果音量为0，设置为默认值32，否则静音
+                if (ambientSounds[type].volume === 0) {
+                    const slider = document.getElementById(`volume-slider-${type}`);
+                    slider.value = 32;
+                    updateSoundVolume(type, 32);
+                }
+                else {
+                    const slider = document.getElementById(`volume-slider-${type}`);
+                    slider.value = 0;
+                    updateSoundVolume(type, 0);
+                }
+            });
+        });
+        
+        // 窗口大小改变时调整滚动容器高度
+        window.addEventListener('resize', () => {
+            updateTaskListHeight();
+        });
+        
+        // 更新任务列表高度
+        function updateTaskListHeight() {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const footerHeight = document.querySelector('footer').offsetHeight;
+            const mainPadding = 32; // 8px * 4
+            const containerPadding = 48; // 12px * 4
+            
+            const availableHeight = window.innerHeight - headerHeight - footerHeight - mainPadding - containerPadding;
+            taskListContainer.style.height = `${availableHeight - 80}px`; // 减去新增任务区域的高度
+        }
+    </script>
+</body>
+</html>
+    
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/html/frontend/index.html" data-id="cmbqn6es20000rw3mbgst28b0" data-title="" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%91%E9%97%B2/" rel="tag">休闲</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" rel="tag">博客介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" rel="tag">效率工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" rel="tag">时间管理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag">游戏</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E4%BC%91%E9%97%B2/" style="font-size: 20px;">休闲</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">博客介绍</a> <a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">效率工具</a> <a href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" style="font-size: 20px;">时间管理</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/06/">六月 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/06/10/tomatoclock/">番茄钟工作法 时间管理魔法</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/enterhtml/">FoucsFlow专注于此</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/enterhtml2/">放烟花小程序</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/enterhtml3/">休闲小游戏</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/hello-world/">欢迎来到我们的Hexo博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

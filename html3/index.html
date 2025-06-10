@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="10       😊       0                 简单       中等       困难                  .minesweeper-game {   font-family: Arial, sans-serif;   max-width: 500px;   margin: 20px auto;   text-align: ce">
+<meta property="og:type" content="website">
+<meta property="og:title" content="hexo">
+<meta property="og:url" content="http://example.com/html3/index.html">
+<meta property="og:site_name" content="hexo">
+<meta property="og:description" content="10       😊       0                 简单       中等       困难                  .minesweeper-game {   font-family: Arial, sans-serif;   max-width: 500px;   margin: 20px auto;   text-align: ce">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-10T13:16:47.093Z">
+<meta property="article:modified_time" content="2025-06-10T13:16:47.093Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/html3/index.html" class="article-date">
+  <time class="dt-published" datetime="2025-06-10T13:16:47.093Z" itemprop="datePublished">2025-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <div class="minesweeper-game">
+  <div class="minesweeper-header">
+    <div class="minesweeper-controls">
+      <span id="minesweeper-mines">10</span>
+      <button id="minesweeper-reset">😊</button>
+      <span id="minesweeper-time">0</span>
+    </div>
+    <div class="minesweeper-difficulty">
+      <button data-difficulty="easy">简单</button>
+      <button data-difficulty="medium">中等</button>
+      <button data-difficulty="hard">困难</button>
+    </div>
+  </div>
+  <div class="minesweeper-board" id="minesweeper-board"></div>
+  <div class="minesweeper-status" id="minesweeper-status"></div>
+</div>
+
+<style>
+.minesweeper-game {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.minesweeper-header {
+  margin-bottom: 10px;
+}
+
+.minesweeper-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.minesweeper-controls span {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  background: black;
+  color: red;
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+
+.minesweeper-controls button {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.minesweeper-difficulty button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.minesweeper-board {
+  display: grid;
+  grid-gap: 1px;
+  background: #999;
+  border: 2px solid #999;
+  border-radius: 5px;
+}
+
+.minesweeper-cell {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.minesweeper-cell.revealed {
+  background: #eee;
+}
+
+.minesweeper-cell.mine {
+  background: #f88;
+}
+
+.minesweeper-cell.flagged {
+  background: #ccc url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='red'><path d='M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z'/></svg>") no-repeat center;
+}
+
+.minesweeper-status {
+  margin-top: 10px;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+/* Number colors */
+.minesweeper-cell.revealed[data-value="1"] { color: blue; }
+.minesweeper-cell.revealed[data-value="2"] { color: green; }
+.minesweeper-cell.revealed[data-value="3"] { color: red; }
+.minesweeper-cell.revealed[data-value="4"] { color: darkblue; }
+.minesweeper-cell.revealed[data-value="5"] { color: brown; }
+.minesweeper-cell.revealed[data-value="6"] { color: teal; }
+.minesweeper-cell.revealed[data-value="7"] { color: black; }
+.minesweeper-cell.revealed[data-value="8"] { color: gray; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Game settings
+  const difficulties = {
+    easy: { rows: 8, cols: 8, mines: 10 },
+    medium: { rows: 12, cols: 12, mines: 30 },
+    hard: { rows: 16, cols: 16, mines: 50 }
+  };
+  
+  let currentDifficulty = 'easy';
+  let rows = difficulties[currentDifficulty].rows;
+  let cols = difficulties[currentDifficulty].cols;
+  let mines = difficulties[currentDifficulty].mines;
+  
+  // Game state
+  let board = [];
+  let revealed = [];
+  let flagged = [];
+  let gameOver = false;
+  let firstClick = true;
+  let timer = null;
+  let seconds = 0;
+  
+  // DOM elements
+  const boardElement = document.getElementById('minesweeper-board');
+  const resetButton = document.getElementById('minesweeper-reset');
+  const minesDisplay = document.getElementById('minesweeper-mines');
+  const timeDisplay = document.getElementById('minesweeper-time');
+  const statusDisplay = document.getElementById('minesweeper-status');
+  const difficultyButtons = document.querySelectorAll('.minesweeper-difficulty button');
+  
+  // Initialize game
+  function initGame() {
+    // Reset game state
+    board = Array(rows).fill().map(() => Array(cols).fill(0));
+    revealed = Array(rows).fill().map(() => Array(cols).fill(false));
+    flagged = Array(rows).fill().map(() => Array(cols).fill(false));
+    gameOver = false;
+    firstClick = true;
+    seconds = 0;
+    
+    // Update displays
+    minesDisplay.textContent = mines;
+    timeDisplay.textContent = seconds;
+    statusDisplay.textContent = '';
+    
+    // Clear timer
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+    
+    // Create board
+    boardElement.innerHTML = '';
+    boardElement.style.gridTemplateColumns = `repeat(${cols}, 30px)`;
+    boardElement.style.gridTemplateRows = `repeat(${rows}, 30px)`;
+    
+    for (let y = 0; y < rows; y++) {
+      for (let x = 0; x < cols; x++) {
+        const cell = document.createElement('div');
+        cell.className = 'minesweeper-cell';
+        cell.dataset.x = x;
+        cell.dataset.y = y;
+        
+        cell.addEventListener('click', () => handleCellClick(x, y));
+        cell.addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+          handleRightClick(x, y);
+        });
+        
+        boardElement.appendChild(cell);
+      }
+    }
+  }
+  
+  // Place mines (after first click to ensure first click is safe)
+  function placeMines(firstX, firstY) {
+    let minesPlaced = 0;
+    
+    while (minesPlaced < mines) {
+      const x = Math.floor(Math.random() * cols);
+      const y = Math.floor(Math.random() * rows);
+      
+      // Don't place mine on first click position or adjacent cells
+      const isNearFirstClick = Math.abs(x - firstX) <= 1 && Math.abs(y - firstY) <= 1;
+      
+      if (board[y][x] !== -1 && !isNearFirstClick) {
+        board[y][x] = -1; // -1 represents a mine
+        minesPlaced++;
+        
+        // Increment numbers around the mine
+        for (let dy = -1; dy <= 1; dy++) {
+          for (let dx = -1; dx <= 1; dx++) {
+            const nx = x + dx;
+            const ny = y + dy;
+            
+            if (nx >= 0 && nx < cols && ny >= 0 && ny < rows && board[ny][nx] !== -1) {
+              board[ny][nx]++;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Start timer
+  function startTimer() {
+    if (!timer) {
+      timer = setInterval(() => {
+        seconds++;
+        timeDisplay.textContent = seconds;
+      }, 1000);
+    }
+  }
+  
+  // Handle cell click
+  function handleCellClick(x, y) {
+    if (gameOver || flagged[y][x]) return;
+    
+    if (firstClick) {
+      placeMines(x, y);
+      firstClick = false;
+      startTimer();
+    }
+    
+    if (board[y][x] === -1) {
+      // Clicked on a mine - game over
+      revealAllMines();
+      gameOver = true;
+      statusDisplay.textContent = '游戏结束!';
+      resetButton.textContent = '😵';
+      clearInterval(timer);
+      return;
+    }
+    
+    revealCell(x, y);
+    checkWin();
+  }
+  
+  // Handle right click (flag)
+  function handleRightClick(x, y) {
+    if (gameOver || revealed[y][x]) return;
+    
+    flagged[y][x] = !flagged[y][x];
+    updateCellDisplay(x, y);
+    
+    // Update mines count
+    const flaggedCount = flagged.flat().filter(Boolean).length;
+    minesDisplay.textContent = mines - flaggedCount;
+  }
+  
+  // Reveal cell
+  function revealCell(x, y) {
+    if (x < 0 || x >= cols || y < 0 || y >= rows || revealed[y][x] || flagged[y][x]) {
+      return;
+    }
+    
+    revealed[y][x] = true;
+    updateCellDisplay(x, y);
+    
+    // If empty cell, reveal adjacent cells
+    if (board[y][x] === 0) {
+      for (let dy = -1; dy <= 1; dy++) {
+        for (let dx = -1; dx <= 1; dx++) {
+          revealCell(x + dx, y + dy);
+        }
+      }
+    }
+  }
+  
+  // Update cell display
+  function updateCellDisplay(x, y) {
+    const index = y * cols + x;
+    const cell = boardElement.children[index];
+    
+    if (flagged[y][x]) {
+      cell.className = 'minesweeper-cell flagged';
+    } else if (revealed[y][x]) {
+      cell.className = 'minesweeper-cell revealed';
+      if (board[y][x] === -1) {
+        cell.className += ' mine';
+        cell.textContent = '💣';
+      } else if (board[y][x] > 0) {
+        cell.textContent = board[y][x];
+        cell.dataset.value = board[y][x];
+      }
+    } else {
+      cell.className = 'minesweeper-cell';
+      cell.textContent = '';
+      cell.removeAttribute('data-value');
+    }
+  }
+  
+  // Reveal all mines (when game is lost)
+  function revealAllMines() {
+    for (let y = 0; y < rows; y++) {
+      for (let x = 0; x < cols; x++) {
+        if (board[y][x] === -1) {
+          revealed[y][x] = true;
+          updateCellDisplay(x, y);
+        }
+      }
+    }
+  }
+  
+  // Check if player has won
+  function checkWin() {
+    let unrevealedSafeCells = 0;
+    
+    for (let y = 0; y < rows; y++) {
+      for (let x = 0; x < cols; x++) {
+        if (!revealed[y][x] && board[y][x] !== -1) {
+          unrevealedSafeCells++;
+        }
+      }
+    }
+    
+    if (unrevealedSafeCells === 0) {
+      // Player won!
+      gameOver = true;
+      statusDisplay.textContent = '你赢了!';
+      resetButton.textContent = '😎';
+      clearInterval(timer);
+      
+      // Flag all mines
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          if (board[y][x] === -1 && !flagged[y][x]) {
+            flagged[y][x] = true;
+            updateCellDisplay(x, y);
+          }
+        }
+      }
+      minesDisplay.textContent = '0';
+    }
+  }
+  
+  // Event listeners
+  resetButton.addEventListener('click', initGame);
+  
+  difficultyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      currentDifficulty = button.dataset.difficulty;
+      rows = difficulties[currentDifficulty].rows;
+      cols = difficulties[currentDifficulty].cols;
+      mines = difficulties[currentDifficulty].mines;
+      initGame();
+    });
+  });
+  
+  // Start the game
+  initGame();
+});
+</script>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/html3/index.html" data-id="cmbqkii3o00026o3m51gvagtv" data-title="" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%91%E9%97%B2/" rel="tag">休闲</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" rel="tag">博客介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" rel="tag">效率工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" rel="tag">时间管理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag">游戏</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E4%BC%91%E9%97%B2/" style="font-size: 20px;">休闲</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">博客介绍</a> <a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">效率工具</a> <a href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" style="font-size: 20px;">时间管理</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/06/">六月 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/06/10/tomatoclock/">番茄钟工作法 时间管理魔法</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/enterhtml/">FoucsFlow专注于此</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/enterhtml2/">放烟花小程序</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/enterhtml3/">休闲小游戏</a>
+          </li>
+        
+          <li>
+            <a href="/2025/06/10/hello-world/">欢迎来到我们的Hexo博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
